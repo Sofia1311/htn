@@ -1,0 +1,35 @@
+def drive(ag,r1,r2):
+    if at(ag,r1) and hallway(r1,r2):
+    	return 1
+    else:
+    	return 0
+def pickup(ag,r,b):
+    if at(ag,r) and at(b,r) and handempty(ag):
+    	return 1
+    else:
+    	return 0
+def putdown(ag,r,b):
+    if at(ag,r) and holding(b,ag):
+    	return 1
+    else:
+    	return 0
+def hallway(arg0,arg1):
+    for un in P.init:
+        if un[0] == pred.name and un[1] == pred.parameters:
+            return 1
+    return 0
+def at(arg0,arg1):
+    for un in P.init:
+        if un[0] == pred.name and un[1] == pred.parameters:
+            return 1
+    return 0
+def holding(arg0,arg1):
+    for un in P.init:
+        if un[0] == pred.name and un[1] == pred.parameters:
+            return 1
+    return 0
+def handempty(ag):
+    for un in P.init:
+        if un[0] == pred.name and un[1] == pred.parameters:
+            return 1
+    return 0
